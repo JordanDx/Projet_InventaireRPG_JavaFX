@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FenetreController">
+    <fx:define>
+            <Integer fx:id="moins1" fx:value="-1" />
+    </fx:define>
+   <right>
+      <VBox prefHeight="500.0" prefWidth="270.0" BorderPane.alignment="CENTER">
+         <children>
+            <ListView fx:id="listeObjets" prefHeight="190.0" prefWidth="300.0"></ListView>
+            <TextArea fx:id="statistiquesObjet" prefHeight="200.0" prefWidth="200.0" />
+            <TextArea fx:id="nombreObjetsInventaire" prefHeight="50.0" prefWidth="200.0" />
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="boutonEquiper" mnemonicParsing="false" onAction="#equiper" text="Equiper" textAlignment="CENTER"></Button>
+                  <Button fx:id="boutonDesequiper" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#desequiper" text="Desequiper"></Button>
+                  <Button fx:id="boutonDeteriorer" mnemonicParsing="false" onAction="#deteriorer" text="Deteriorer" textAlignment="CENTER"></Button>
+                  <Button fx:id="boutonReparer" mnemonicParsing="false" onAction="#reparer" text="Reparer" textAlignment="CENTER"></Button>
+               </children>
+            </HBox>    
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="boutonVendre" mnemonicParsing="false" onAction="#vendre" text="Vendre" textAlignment="CENTER"></Button>
+                  <Button fx:id="boutonJeter" mnemonicParsing="false" onAction="#jeter" text="Jeter" textAlignment="CENTER"></Button>
+                  <Button fx:id="quitter" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#quitter" text="Quitter"></Button>
+               </children>
+            </HBox>  
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="40.0" right="30.0" top="40.0" />
+         </BorderPane.margin>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </VBox>
+   </right>
+   <left>
+      <VBox fx:id="vboxStats" style="" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+                 <TextArea fx:id="nomPersonnage" prefHeight="0.0" prefWidth="100.0" />
+                 <HBox>
+                    <ImageView fitHeight="40" fitWidth="40">
+                         <Image url="images/vieImage.jpg"/>
+                    </ImageView>
+                    <Label fx:id="viePersonnage"/>    
+                 </HBox>
+                 <HBox>
+                    <ImageView fitHeight="40" fitWidth="40">
+                        <Image url="images/attaqueImage.png"/>
+                    </ImageView>
+                    <Label fx:id="attaquePersonnage"/>     
+                </HBox>
+               <HBox>
+                 <ImageView fitHeight="40" fitWidth="40">
+                     <Image url="images/defenseImage.png"/>
+                 </ImageView>
+                 <Label fx:id="defensePersonnage"/>     
+             </HBox>
+               <HBox>
+                 <ImageView fitHeight="40" fitWidth="40">
+                     <Image url="images/intelligenceImage.png"/>
+                 </ImageView>
+                 <Label fx:id="intelligencePersonnage"/>     
+             </HBox>
+               <HBox>
+                 <ImageView fitHeight="40" fitWidth="40">
+                     <Image url="images/manaImage.png"/>
+                 </ImageView>
+                 <Label fx:id="manaPersonnage"/>     
+             </HBox>
+               <HBox>
+                 <ImageView fitHeight="40" fitWidth="40">
+                     <Image url="images/vitesseImage.png"/>
+                 </ImageView>
+                 <Label fx:id="vitessePersonnage"/>     
+             </HBox>
+              <HBox>
+                 <ImageView fitHeight="40" fitWidth="40">
+                     <Image url="images/piecesImage.png"/>
+                 </ImageView>
+                 <Label fx:id="piecesPersonnage"/>     
+             </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="40.0" left="30.0" top="40.0" />
+         </BorderPane.margin>
+      </VBox>
+   </left>
+   <center>
+      <ListView fx:id="equipement" prefHeight="320.0" prefWidth="168.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="40.0" top="40.0" />
+         </BorderPane.margin>
+      </ListView>
+   </center>
+</BorderPane>
